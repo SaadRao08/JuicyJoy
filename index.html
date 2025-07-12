@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JuicyJoy for Kids 🧃</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #fff5e1;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff6b6b;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1606788075761-0c7b61cddf5c') no-repeat center center/cover;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      font-size: 1.5em;
+      margin-top: 15px;
+    }
+
+    .section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .flavor-list {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .flavor-card {
+      background: #ffecd1;
+      border-radius: 12px;
+      width: 200px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .flavor-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .flavor-card h3 {
+      margin: 0;
+      padding: 1rem;
+      font-size: 1.2rem;
+      color: #d45d79;
+    }
+
+    #fact-box {
+      margin-top: 2rem;
+    }
+
+    #fact {
+      font-style: italic;
+      margin: 1rem auto;
+      max-width: 600px;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    button {
+      background: #ffa502;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      font-size: 1rem;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    button:hover {
+      background: #e17000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ff6b6b;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>JuicyJoy for Kids 🧃</h1>
+    <nav>
+      <a href="#flavors">Flavors</a>
+      <a href="#funfact">Fun Fact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div>🌈 "Every sip of JuicyJoy is a burst of fruity fun! Packed with the sweet zing of sun-ripened oranges, the playful pop of crisp apples, and the giggly goodness of grapes, our juice isn’t just tasty — it’s an adventure in a bottle. Made with real fruit and no yucky stuff, JuicyJoy is the drink that keeps kids smiling, dancing, and asking for more. Because when juice is this delicious, every gulp feels like a celebration!" 🍓🍊🍏</div>
+  </div>
+
+  <section id="flavors" class="section">
+    <h2>Our Yummy Flavors</h2>
+    <div class="flavor-list">
+      <div class="flavor-card">
+        <img src="./Applejuice.jpg" alt="Apple Juice" />
+        <h3>Splash</h3>
+      </div>
+      <div class="flavor-card">
+        <img src="https://moralstories26.com/img/2020/04/18-Interesting-Facts-about-Fruits-and-Vegetable-Juice.jpg" alt="Grape Juice" />
+        <h3> Giggles</h3>
+      </div>
+      <div class="flavor-card">
+        <img src="./juices.jfif" alt="Orange Juice" />
+        <h3>Zing</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="funfact" class="section">
+    <h2>Juice Fun Fact 🍊</h2>
+    <div id="fact-box">
+      <button onclick="showFact()">Show Me a Fun Fact!</button>
+      <p id="fact"></p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 JuicyJoy. Sip the Fun!
+  </footer>
+
+  <script>
+    const juiceFacts = [
+      "Orange juice was once used as a medicine!",
+      "Grapes are 80% water — just like juice!",
+      "Apple juice can help you sleep better.",
+      "Carrot juice can turn your skin slightly orange if you drink a LOT of it!",
+      "Kids in ancient times drank honey water instead of juice."
+    ];
+
+    function showFact() {
+      const fact = juiceFacts[Math.floor(Math.random() * juiceFacts.length)];
+      document.getElementById("fact").textContent = fact;
+    }
+  </script>
+
+</body>
+</html>
